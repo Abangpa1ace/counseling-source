@@ -15,9 +15,12 @@ export default function Header() {
           />
         </Link>
         <nav className="flex gap-8">
-          <Link href="/introduction">센터소개</Link>
-          <Link href="/consultation">상담안내</Link>
-          <Link href="/contact">CONTACT</Link>
+          <Link href="/about">인사말</Link>
+          <Link href="/director">센터장 소개</Link>
+          <Link href="/basic-counseling">심리상담</Link>
+          <Link href="/group-counseling">집단상담</Link>
+          <Link href="/assessment">심리평가</Link>
+          <Link href="/notice">공지사항</Link>
         </nav>
       </div>
     </header>

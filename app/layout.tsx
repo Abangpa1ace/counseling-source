@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./reset.css";
 import "./globals.css";
-import Header from "@/components/root/Header";
-import Footer from "@/components/root/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "마음행복심리상담센터",
@@ -18,7 +18,9 @@ export default function RootLayout({
     <html lang="ko">
       <body cz-shortcut-listen="true">
         <Header />
-        <main className="mt-[var(--h-header)] pb-[80px]">{children}</main>
+        <main className="pt-[var(--h-header)] pb-[80px] min-h-[calc(100vh-180px)]">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

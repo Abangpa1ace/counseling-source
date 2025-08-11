@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --w-desktop: 1280px;
+  --w-desktop: 1080px;
   --h-header: 92px;
   --z-layout: 100;
 
