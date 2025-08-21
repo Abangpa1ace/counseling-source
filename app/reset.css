@@ -110,9 +110,9 @@ textarea {
   box-sizing: border-box;
   outline: 0;
   background-color: transparent;
+  color: var(--color-gray800);
 }
 a {
-  color: black;
   text-decoration: none;
   outline: none;
 }

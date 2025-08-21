@@ -1,4 +1,4 @@
-import CenterPictureCarousel from "@/components/about/CenterPictureCarousel";
+import CenterPictureCarousel from "@/app/about/components/CenterPictureCarousel";
 import MainBanner from "@/components/layout/MainBanner";
 import Divider from "@/components/layout/units/Divider";
 import Wrapper from "@/components/layout/Wrapper";
@@ -63,7 +63,7 @@ export default function About() {
         </section>
         <Divider />
         <section className="mt-[60px]">
-          <h3 className="text-[24px] text-[var(--color-green900)] font-[700] mb-[12px]">
+          <h3 className="text-[28px] text-[var(--color-green900)] font-[700] mb-[16px]">
             센터 둘러보기
           </h3>
           <CenterPictureCarousel />
