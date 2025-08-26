@@ -15,7 +15,7 @@ export default function About() {
             <b className="text-[var(--color-green700)] font-[700]">마음행복</b>
             에 방문하신 것을 진심으로 환영합니다.
           </h2>
-          <p className="mt-[24px] text-[18px] leading-[24px]">
+          <p className="mt-[24px] text-[18px] leading-[28px]">
             <b className="font-[700]">마음행복</b>은 <br />
             삶을 살아가며 겪는 다양한 감정을 나누고 풀어낼 수 있도록
             <br />
@@ -36,7 +36,7 @@ export default function About() {
           </p>
         </section>
         <Divider />
-        <section className="text-[18px] leading-[24px]">
+        <section className="text-[18px] leading-[28px]">
           <dl className="flex gap-4 my-[8px]">
             <dt className="w-[80px]">2021.02</dt>
             <dd>&apos;마음행복 상담연구소&apos; 개원</dd>

@@ -18,10 +18,14 @@ const HeaderLinkList = [
     href: "/basic-counseling",
     label: "심리상담",
   },
-  {
-    href: "/group-counseling",
-    label: "집단상담",
-  },
+  // {
+  //   href: "/group-counseling",
+  //   label: "집단상담",
+  // },
+  // {
+  //   href: "/super-vision",
+  //   label: "수퍼비전",
+  // },
   {
     href: "/assessment",
     label: "심리평가",
