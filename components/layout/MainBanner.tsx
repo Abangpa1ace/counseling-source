@@ -9,6 +9,7 @@ export default function MainBanner() {
         src="/images/main-banner.jpg"
         alt="main-banner"
         className="h-full w-full object-cover"
+        priority
       />
     </div>
   );

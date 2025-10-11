@@ -1,3 +1,4 @@
+import DotListBox from "@/components/DotListBox";
 import MainBanner from "@/components/layout/MainBanner";
 import Wrapper from "@/components/layout/Wrapper";
 
@@ -17,21 +18,23 @@ export default function AssessmentPage() {
             돕기 위해서도 심리평가가 필요합니다. <br />
             따라서, 면담 후 필요한 검사를 실시하고 해석상담을 받아보실 수
             있습니다. <br />
-            <br />
-            <div className="text-[16px] text-[var(--color-green600)]">
-              - 다면인성검사(MMPI-2, MMPI-A) <br />
-              - 기질 및 성격검사(TCI, JTCI) <br />
-              - 문장완성검사(SCT) <br />
-              - 적성검사(Holland) <br />
-              - 학습동기 및 학습전략검사(MLST) <br />
-              - 성격유형검사(MBTI) <br />
-              - 그림검사(HTP, KFD, DAP) <br />
-              - 아동청소년 행동평가(CBCL) <br />
-              - 부모양육태도검사(PAT) <br />
-              - 이외 지능검사 포함 심리진단 및 평가
-              <br />
-            </div>
           </p>
+          <DotListBox
+            className="mt-[16px]"
+            fontSize={16}
+            textList={[
+              "다면인성검사(MMPI-2, MMPI-A)",
+              "기질 및 성격검사(TCI, JTCI)",
+              "문장완성검사(SCT)",
+              "적성검사(Holland)",
+              "학습동기 및 학습전략검사(MLST)",
+              "성격유형검사(MBTI)",
+              "그림검사(HTP, KFD, DAP)",
+              "아동청소년 행동평가(CBCL)",
+              "부모양육태도검사(PAT)",
+              "이외 지능검사 포함 심리진단 및 평가",
+            ]}
+          />
         </section>
       </Wrapper>
     </>
