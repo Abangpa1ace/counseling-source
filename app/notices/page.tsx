@@ -9,8 +9,8 @@ interface NoticeUnitType {
 
 const NoticeList: NoticeUnitType[] = [
   {
-    title: "[안내] 전국민 마음투자 지원사업 실시",
-    date: "2024-09-11",
+    title: "[안내] 마음행복 심리상담센터 사이트 게시",
+    date: "2026-03-01",
   },
 ].map((item, index) => ({
   id: index + 1,

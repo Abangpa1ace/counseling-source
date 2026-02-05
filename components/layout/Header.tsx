@@ -87,7 +87,7 @@ export default function Header() {
   return (
     <header className="w-full h-[var(--h-header)] fixed top-0 left-0 right-0 z-[var(--z-layout)] shadow-[0px_5px_11px_0px_rgba(50,50,50,0.08)] bg-[#fff]">
       <div className="w-[var(--w-desktop)] max-w-[var(--w-desktop)] mx-auto h-full flex items-center justify-between px-[var(--spacing-container)]">
-        <Link href="/">
+        <Link href="/" className="outline-none border-0">
           <Image
             src="/images/main-logo.png"
             alt="main-logo"
@@ -111,7 +111,7 @@ export default function Header() {
                   "hover:text-[var(--color-green800)] transition-colors duration-200",
                   pathname.includes(menu.href)
                     ? "text-[var(--color-green800)] font-[700]"
-                    : ""
+                    : "",
                 )}
               >
                 {menu.label}
@@ -124,7 +124,7 @@ export default function Header() {
                       key={subMenu.href}
                       className={cn(
                         "bg-[var(--color-white)] py-[16px] px-[20px] text-[16px] leading-[24px] text-[var(--color-gray700)] cursor-pointer text-[15px]",
-                        "hover:bg-[var(--color-gray50)] hover:text-[var(--color-green800)]"
+                        "hover:bg-[var(--color-gray50)] hover:text-[var(--color-green800)]",
                       )}
                       onClick={(e) => handleClick(subMenu, e)}
                     >
