@@ -106,7 +106,7 @@ export default function Header() {
               <div
                 onClick={(e) => handleClick(menu, e)}
                 className={cn(
-                  "relative cursor-pointer",
+                  "relative cursor-pointer py-[8px] px-[12px]",
                   "hover:text-[var(--color-green800)] transition-colors duration-200",
                   pathname.includes(menu.href)
                     ? "text-[var(--color-green800)] font-[700]"
