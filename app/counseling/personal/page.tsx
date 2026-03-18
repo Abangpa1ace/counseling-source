@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CounselingLink from "../../components/shared/CounselingLink";
 
 export default function PersonalCounselingPage() {
   return (
@@ -19,11 +20,12 @@ export default function PersonalCounselingPage() {
         <br />주 1회 1-2회, 45분(또는 50분) 진행됩니다.
         <br />
         <br />
-        <span className="text-[var(--color-green700)]">
+        <span className="text-[var(--color-green600)]">
           * 사정상 면대면 상담이 어렵거나 거주지가 지방인 경우 화상상담(줌)이나
           전화상담으로 진행 가능합니다.
         </span>
       </p>
+      <CounselingLink />
     </div>
   );
 }

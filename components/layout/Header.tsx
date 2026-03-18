@@ -3,7 +3,7 @@
 import { cn } from "@/utils/style";
 import Image from "next/image";
 import Link from "next/link";
-import { MouseEvent, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 interface MenuType {
@@ -89,11 +89,10 @@ export default function Header() {
       <div className="w-[var(--w-desktop)] max-w-[var(--w-desktop)] mx-auto h-full flex items-center justify-between px-[var(--spacing-container)]">
         <Link href="/" className="outline-none border-0">
           <Image
-            src="/images/main-logo.png"
+            src="/images/main-logo2.png"
             alt="main-logo"
-            width={92}
-            height={92}
-            className="scale-[1.3]"
+            width={180}
+            height={50}
           />
         </Link>
         <nav className="flex gap-8">

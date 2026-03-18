@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CounselingLink from "../../components/shared/CounselingLink";
 
 export default function FamilyCounselingPage() {
   return (
@@ -22,10 +23,11 @@ export default function FamilyCounselingPage() {
         회복이 됩니다. 부부(커플)상담, 가족상담을 통해서 갈등을 해결하고 다름을
         인정하며 서로 존중, 배려할 수 있는 우리가 될 수 있습니다. <br />
         <br />
-        <span className="text-[var(--color-green700)]">
+        <span className="text-[var(--color-green600)]">
           * 부부(커플): 60분~90분, 가족상담: 100분 진행합니다.
         </span>
       </p>
+      <CounselingLink />
     </div>
   );
 }

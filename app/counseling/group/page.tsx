@@ -1,5 +1,6 @@
 import DotListBox from "@/components/DotListBox";
 import Image from "next/image";
+import CounselingLink from "../../components/shared/CounselingLink";
 
 export default function GroupCounselingPage() {
   return (
@@ -43,6 +44,7 @@ export default function GroupCounselingPage() {
           ]}
         />
       </p>
+      <CounselingLink />
     </div>
   );
 }

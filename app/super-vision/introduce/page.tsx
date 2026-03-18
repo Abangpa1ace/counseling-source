@@ -18,7 +18,7 @@ export default function SuperVisionIntroducePage() {
         것입니다. <br />본 기관에서는 전문상담사, 상담심리사, 청소년상담사,
         임상심리사 등 자격취득을 준비하는 분들을 위해 수퍼비전과 내담자 경험
         수련과정을 진행하고 있습니다. <br />
-        <span className="mt-[8px] block text-[var(--color-green700)]">
+        <span className="mt-[8px] block text-[var(--color-green600)]">
           ※ 수퍼비전(개인 또는 소그룹)을 원한다면, 상시접수하고 있으니
           연락주시면 됩니다.
         </span>

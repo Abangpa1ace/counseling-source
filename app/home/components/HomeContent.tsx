@@ -13,7 +13,7 @@ export default function HomeContent() {
           width={1280}
           height={260}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-800/60 to-neutral-700/40" />
         <div className="relative text-center mx-auto max-w-[1000px] mt-[240px]">
           <h2 className="text-[40px] leading-[1.3] text-[var(--color-gray50)] font-[800]">
             반갑습니다.
