@@ -1,0 +1,86 @@
+.wrapper {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-green800);
+  margin-bottom: 8px;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.input {
+  padding: 8px 12px;
+  border: 1px solid var(--color-gray300);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s;
+
+  &::placeholder {
+    color: var(--color-gray400);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--color-blue500);
+    border-color: transparent;
+  }
+}
+
+.textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-gray300);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s;
+  resize: none;
+
+  &::placeholder {
+    color: var(--color-gray400);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--color-blue500);
+    border-color: transparent;
+  }
+}
+
+.errorBox {
+  padding: 16px;
+  background-color: var(--color-red50);
+  border: 1px solid var(--color-red200);
+  border-radius: 8px;
+}
+
+.errorText {
+  color: var(--color-red800);
+  font-size: 14px;
+  font-weight: 500;
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+}

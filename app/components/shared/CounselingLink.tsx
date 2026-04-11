@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import styles from "./CounselingLink.module.scss";
 
 export default function CounselingLink() {
   const router = useRouter();
@@ -16,11 +17,8 @@ export default function CounselingLink() {
   };
 
   return (
-    <div className="mt-[28px] text-right">
-      <button
-        onClick={handleClick}
-        className="inline-flex items-center gap-[4px] text-[var(--color-green600)] hover:text-[var(--color-green600)] transition-all duration-200 text-[18px] font-[600] cursor-pointer bg-transparent border-none p-0 hover:translate-x-[4px] hover:scale-[1.05]"
-      >
+    <div className={styles.wrapper}>
+      <button onClick={handleClick} className={styles.button}>
         상담하러 가기
         <svg
           width="16"
@@ -28,7 +26,7 @@ export default function CounselingLink() {
           viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="transition-transform duration-200"
+          className={styles.icon}
         >
           <path
             d="M6 3L11 8L6 13"

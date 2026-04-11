@@ -1,0 +1,40 @@
+.section {
+  display: flex;
+  gap: 40px;
+}
+
+.profileImage {
+  width: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--color-green800);
+  margin-bottom: 20px;
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+.mainList {
+  font-size: 18px;
+  line-height: 28px;
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
+}
+
+.subList {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--color-gray700);
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,254 @@
+.header {
+  width: 100%;
+  height: var(--h-header);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-layout);
+  box-shadow: 0px 5px 11px 0px rgba(50, 50, 50, 0.08);
+  background-color: #fff;
+
+  @media (max-width: 767px) {
+    height: 54px;
+  }
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--w-desktop);
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-container);
+}
+
+.logo {
+  border: none;
+  outline: none;
+
+  img {
+    @media (max-width: 767px) {
+      width: 100px !important;
+      height: auto !important;
+    }
+  }
+}
+
+// 데스크탑 nav
+.desktopNav {
+  display: none;
+  gap: 32px;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuLabel {
+  position: relative;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-green800);
+  }
+
+  &.active {
+    color: var(--color-green800);
+    font-weight: 700;
+  }
+}
+
+.subMenuList {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 180px;
+}
+
+.subMenuSpacer {
+  height: 54px;
+  background: transparent;
+}
+
+.subMenuItem {
+  background-color: #fff;
+  padding: 16px 20px;
+  line-height: 24px;
+  color: var(--color-gray700);
+  cursor: pointer;
+  font-size: 15px;
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+
+  &:hover {
+    background-color: var(--color-gray50);
+    color: var(--color-green800);
+  }
+}
+
+// 햄버거
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.hamburgerLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-gray700);
+}
+
+// 오버레이
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+// 사이드바
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 280px;
+  background-color: #fff;
+  z-index: 201;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  transform: translateX(100%);
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.sidebarTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: var(--h-header);
+  border-bottom: 1px solid var(--color-gray100);
+
+  @media (max-width: 767px) {
+    height: 54px;
+  }
+}
+
+.closeButton {
+  padding: 4px;
+  color: var(--color-gray600);
+
+  &:hover {
+    color: var(--color-gray900);
+  }
+}
+
+.sidebarNav {
+  padding: 8px 0;
+  overflow-y: auto;
+  height: calc(100% - var(--h-header));
+
+  @media (max-width: 767px) {
+    height: calc(100% - 48px);
+  }
+}
+
+.sidebarMenuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition:
+    color 0.15s,
+    background-color 0.15s;
+  color: var(--color-gray700);
+
+  @media (max-width: 767px) {
+    font-size: 13px;
+  }
+
+  &:hover {
+    background-color: var(--color-gray50);
+    color: var(--color-green800);
+  }
+
+  &.active {
+    color: var(--color-green800);
+    font-weight: 700;
+  }
+}
+
+.chevron {
+  transition: transform 0.2s;
+
+  &.rotated {
+    transform: rotate(180deg);
+  }
+}
+
+.sidebarSubList {
+  background-color: var(--color-gray50);
+}
+
+.sidebarSubItem {
+  padding: 12px 32px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.15s;
+  color: var(--color-gray600);
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+
+  &:hover {
+    color: var(--color-green800);
+  }
+
+  &.active {
+    color: var(--color-green800);
+    font-weight: 600;
+  }
+}

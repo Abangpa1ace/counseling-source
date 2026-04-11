@@ -1,5 +1,6 @@
 import { cn } from "@/utils/style";
 import { PropsWithChildren } from "react";
+import styles from "./Wrapper.module.scss";
 
 interface Props {
   className?: string;
@@ -10,13 +11,6 @@ export default function Wrapper({
   className,
 }: PropsWithChildren<Props>) {
   return (
-    <div
-      className={cn(
-        "max-w-[var(--w-desktop)] mx-auto px-[var(--spacing-container)]",
-        className
-      )}
-    >
-      {children}
-    </div>
+    <div className={cn(styles.wrapper, className)}>{children}</div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Button from "../../components/shared/Button";
+import styles from "./RequestForm.module.scss";
 
 export default function RequestForm() {
   const [formData, setFormData] = useState({
@@ -27,9 +28,7 @@ export default function RequestForm() {
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
@@ -49,22 +48,20 @@ export default function RequestForm() {
   };
 
   return (
-    <div id="request-form" className="bg-white py-[40px]">
-      <div className="mb-8">
-        <h3 className="text-[20px] font-[700] text-gray-900 mb-[8px] text-[var(--color-green800)]">
-          상담 신청
-        </h3>
+    <div id="request-form" className={styles.wrapper}>
+      <div className={styles.header}>
+        <h3 className={styles.title}>상담 신청</h3>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-3 gap-4 mt-[8px]">
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.inputRow}>
           <input
             type="text"
             placeholder="이름"
             value={formData.name}
             onChange={(e) => updateFormData("name", e.target.value)}
             required
-            className="p-[8px_12px] border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 placeholder-gray-400"
+            className={styles.input}
           />
           <input
             type="email"
@@ -72,7 +69,7 @@ export default function RequestForm() {
             value={formData.email}
             onChange={(e) => updateFormData("email", e.target.value)}
             required
-            className="p-[8px_12px] border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 placeholder-gray-400"
+            className={styles.input}
           />
           <input
             type="tel"
@@ -80,7 +77,7 @@ export default function RequestForm() {
             value={formData.phone}
             onChange={(e) => updateFormData("phone", e.target.value)}
             required
-            className="p-[8px_12px] border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 placeholder-gray-400"
+            className={styles.input}
           />
         </div>
 
@@ -91,24 +88,19 @@ export default function RequestForm() {
             onChange={(e) => updateFormData("message", e.target.value)}
             required
             rows={4}
-            className="w-full mt-[8px] p-[8px_12px] border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 placeholder-gray-400 resize-none"
+            className={styles.textarea}
           />
         </div>
 
         {submitStatus === "error" && (
-          <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-            <p className="text-red-800 text-sm font-medium">
+          <div className={styles.errorBox}>
+            <p className={styles.errorText}>
               오류가 발생했습니다. 다시 시도해주세요.
             </p>
           </div>
         )}
 
-        <Button
-          type="submit"
-          disabled={isSubmitting}
-          variant="primary"
-          className="mt-[12px]"
-        >
+        <Button type="submit" disabled={isSubmitting} variant="primary">
           {isSubmitting ? "처리 중..." : "신청하기"}
         </Button>
       </form>

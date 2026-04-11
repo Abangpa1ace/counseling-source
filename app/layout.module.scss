@@ -1,0 +1,13 @@
+.main {
+  padding-top: var(--h-header);
+  padding-bottom: 40px;
+  min-height: calc(100vh - 180px);
+
+  @media (max-width: 767px) {
+    padding-top: 54px;
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 80px;
+  }
+}

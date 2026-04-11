@@ -1,0 +1,30 @@
+.wrapper {
+  margin-top: 28px;
+  text-align: right;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-green600);
+  transition: all 0.2s;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
+
+  &:hover {
+    transform: translateX(4px) scale(1.05);
+  }
+}
+
+.icon {
+  transition: transform 0.2s;
+}

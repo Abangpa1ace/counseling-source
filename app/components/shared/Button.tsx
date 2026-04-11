@@ -1,4 +1,6 @@
+import { cn } from "@/utils/style";
 import { ButtonHTMLAttributes } from "react";
+import styles from "./Button.module.scss";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
@@ -11,32 +13,9 @@ export default function Button({
   className = "",
   ...props
 }: ButtonProps) {
-  const baseStyles = "transition-all duration-200";
-  const baseInlineStyles = {
-    padding: "10px 24px",
-    borderRadius: "6px",
-    fontSize: "16px",
-    fontWeight: "500",
-  };
-
-  const variantStyles = {
-    primary: {
-      backgroundColor: "var(--color-green500)",
-      color: "#fff",
-    },
-    secondary: {
-      border: "1px solid var(--color-green500)",
-      color: "var(--color-green500)",
-      backgroundColor: "#fff",
-    },
-  };
-
-  const variantInlineStyles = variantStyles[variant];
-
   return (
     <button
-      className={`${baseStyles} ${className}`}
-      style={{ ...baseInlineStyles, ...variantInlineStyles }}
+      className={cn(styles.button, styles[variant], className)}
       {...props}
     >
       {children}

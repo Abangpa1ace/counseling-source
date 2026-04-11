@@ -1,6 +1,7 @@
 import DotListBox from "@/components/DotListBox";
 import MainBanner from "@/components/layout/MainBanner";
 import Wrapper from "@/components/layout/Wrapper";
+import styles from "./assessment.module.scss";
 
 export default function AssessmentPage() {
   return (
@@ -8,11 +9,11 @@ export default function AssessmentPage() {
       <MainBanner />
       <Wrapper>
         <section>
-          <h2 className="text-[32px] leading-[40px] font-[700] text-[var(--color-green900)] text-center ">
+          <h2 className={styles.title}>
             심리평가
             <br />
           </h2>
-          <p className="mt-[24px] text-[18px] leading-[28px]">
+          <p className={styles.description}>
             심리평가는 개인의 심리적 특성을 이해하기 위한 전문적인 작업
             과정으로, 개인의 성격, 정서, 인지, 적성 등에 대해 객관적인 이해를
             돕기 위해서도 심리평가가 필요합니다. <br />
@@ -20,7 +21,7 @@ export default function AssessmentPage() {
             있습니다. <br />
           </p>
           <DotListBox
-            className="mt-[16px]"
+            className={styles.dotList}
             fontSize={16}
             textList={[
               "다면인성검사(MMPI-2, MMPI-A)",

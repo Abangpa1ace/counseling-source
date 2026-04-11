@@ -1,14 +1,15 @@
 import Image from "next/image";
+import styles from "./MainBanner.module.scss";
 
 export default function MainBanner() {
   return (
-    <div className="h-[260px] w-full mb-[48px]">
+    <div className={styles.banner}>
       <Image
         height={260}
         width={1280}
         src="/images/main-banner.jpg"
         alt="main-banner"
-        className="h-full w-full object-cover"
+        className={styles.image}
         priority
       />
     </div>
